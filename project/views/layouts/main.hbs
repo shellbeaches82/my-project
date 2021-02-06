@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project</title>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="/Thailand">Thailand</a></li>
+        <li><a href="/Japan">Japan</a></li>
+        <li><a href="/Spain">Spain</a></li>
+        <li><a href="/">Home</a></li>
+</ul>
+    {{{body}}}
+</body>
+<script>
+//carousel code inspired from web video: https://www.bing.com/videos/search?q=picture+carousel+in+vanilla+javascript&&view=detail&mid=6B8BAFCFA99803271A6A6B8BAFCFA99803271A6A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dpicture%2Bcarousel%2Bin%2Bvanilla%2Bjavascript%26FORM%3DHDRSC4
+    const carouselSlide = document.querySelector('.slide');
+    const carouselImages = document.querySelectorAll('.slide img');
+    const prevButt = document.querySelector("#prevButt");
+    const nextButt = document.querySelector("#nextButt");
+
+    let counter = 1;
+    const size = carouselImages[0].clientWidth;
+
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    nextButt.addEventListener('click',()  =>{
+        if(counter >=carouselImages.length - 1) return;
+        carouselSlide.style.transition = "transform 0.2s ease-in-out";
+        counter ++;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+
+    prevButt.addEventListener('click',()=>{
+        if(counter <=0) return;
+        carouselSlide.style.transition = "transform 0.2s ease-in-out";
+        counter --;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+
+    setInterval(function(){
+        if(counter >=carouselImages.length - 1) return;
+        carouselSlide.style.transition = "transform 0.2s ease-in-out";
+        counter ++;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }, 3000);
+
+    carouselSlide.addEventListener('transitionend', ()=>{
+        if(carouselImages[counter].id ==='lastClone') {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length - 2;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+        if(carouselImages[counter].id ==='firstClone'){
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length - counter;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+    });
+//form code inspired from previous web dev assignment
+    document.addEventListener('DOMContentLoaded', bindButtons);
+    function bindButtons(){
+    const formTwo = document.get.ElementbyId('voteForm');
+	formTwo.addEventListener('submit', function(event){
+		var reqVote = new XMLHttpRequest();
+		var userVote = document.getElementById("vote").value;
+		var payload = {"vote": userVote};
+
+		reqTwo.open("POST", "http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php", true);
+		reqTwo.setRequestHeader('Content-Type', 'application/json');
+		reqTwo.addEventListener('load', function(){
+			if(reqVote.status >= 200 && reqTwo.status < 400){
+				var responseTwo = JSON.parse(reqTwo.responseText);
+				document.getElementById("vote").textContent = responseTwo.json.email;
+				console.log(JSON.parse(reqVote.responseText));
+			} else {
+				console.log("error in network request: " + reqVote.statusText);
+			}});
+		reqVote.send(JSON.stringify(payload));
+		event.preventDefault();
+	})
+}
+</script> 
+</html>

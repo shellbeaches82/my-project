@@ -1,0 +1,218 @@
+body {background-color: rgba(145, 190, 140, 0.3);}  
+ul.nav {  /* code for navigation bar inspired from: w3schools: https://www.w3schools.com/Css/css_navbar_horizontal.asp*/
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        background-color: rgba(6, 54, 54, 0.952);
+      }
+ul.mainPoints {
+      list-style-position: inside;
+      position: relative;
+      bottom: 720px;
+      left: 250px;
+}   
+h3{
+  text-align: left;
+  color: black;
+  font-size: 200%;
+  font-weight: bold;
+  font-family: Georgia;
+  position: relative;
+  bottom: 730px;
+  left:620px;
+  text-shadow: 1px 1px 2px rgba(237, 238, 236, 0.877);
+  text-decoration: underline;
+  font-variant: small-caps;
+}
+li.point {
+        text-align: left;
+        color: black;
+        font-size: 170%;
+        font-weight: bold;
+        font-family: Georgia;
+        position: relative;
+        left: 110px;
+        list-style-type:circle;
+        text-shadow: 1px 1px 2px rgba(10, 56, 1, 0.877);
+      }    
+li a {
+        float: right;      
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 17px;
+        text-decoration: none;
+        font-family: 'Luckiest Guy';
+        position: relative;
+        right: 25px;
+        bottom: 5px;
+        font-size: 35px;
+        text-shadow: 1px 1px 2px black;
+      }    
+li a:hover { /* code for navigation bar inspired from: w3schools: https://www.w3schools.com/Css/css_navbar_horizontal.asp*/
+        background-color: rgba(231, 162, 33, 0.808);
+      }
+ul.scrollBox { /*code for scoll box inspired from: w3schools: https://www.w3schools.com/cssref/pr_pos_overflow.asp*/
+        background-color:rgb(16, 17, 16);
+        width: 350px;
+        height: 410px;
+        overflow: scroll;
+        text-align: left;
+        color: rgb(161, 243, 54);
+        padding: 0px;
+        font-size: 150%;
+        position: relative;
+        bottom: 70px;
+      }
+
+li {
+        text-align: left;
+        font-size: 100%;
+        color: rgb(223, 241, 241);
+        position: relative;
+        left: 20px;
+        list-style-type: none;
+      }
+.introPic{
+  display: block;
+  width: 1100px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mainIntro{
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.container{/*carousel code inspired from web video: https://www.bing.com/videos/search?q=picture+carousel+in+vanilla+javascript&&view=detail&mid=6B8BAFCFA99803271A6A6B8BAFCFA99803271A6A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dpicture%2Bcarousel%2Bin%2Bvanilla%2Bjavascript%26FORM%3DHDRSC4*/
+  width: 95%;
+  margin: auto;
+  border: 5px solid black;
+  overflow: hidden;
+}
+
+.slide{ /*carousel code inspired from web video: https://www.bing.com/videos/search?q=picture+carousel+in+vanilla+javascript&&view=detail&mid=6B8BAFCFA99803271A6A6B8BAFCFA99803271A6A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dpicture%2Bcarousel%2Bin%2Bvanilla%2Bjavascript%26FORM%3DHDRSC4*/
+  display: flex;
+  width: 95%;
+  height: 500px;
+}
+.butt{
+  border-radius: 50%;
+  text-align: center;
+  color: rgb(255, 255, 255, .8);
+  padding: 10px;
+  position: absolute;
+  background-color: rgba(0, 0, 15, 0.3);
+  bottom: 250px;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#prevButt{/*carousel code inspired from web video: https://www.bing.com/videos/search?q=picture+carousel+in+vanilla+javascript&&view=detail&mid=6B8BAFCFA99803271A6A6B8BAFCFA99803271A6A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dpicture%2Bcarousel%2Bin%2Bvanilla%2Bjavascript%26FORM%3DHDRSC4*/
+  margin:auto;
+  left: 40px;
+}
+#nextButt{/*carousel code inspired from web video: https://www.bing.com/videos/search?q=picture+carousel+in+vanilla+javascript&&view=detail&mid=6B8BAFCFA99803271A6A6B8BAFCFA99803271A6A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dpicture%2Bcarousel%2Bin%2Bvanilla%2Bjavascript%26FORM%3DHDRSC4*/
+  margin:auto;
+  left: 1175px;
+}
+.btn {
+  background-color: rgb(4, 5, 5);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 50px;
+  position: relative;
+  bottom: 580px;
+  left: 800px;
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+h1.pageTitle{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 150px;
+  position: relative;
+  bottom: 170px;
+  text-shadow: 4px 4px 4px white;
+}
+
+span.scrollbox{
+  position: relative;
+  bottom: 200px;
+}
+h2.highlight{
+  font-size: 45px;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
+}
+#mainIntro{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 140px;
+  text-align: center;
+  position: relative;
+  bottom: 190px;
+  text-shadow: 6px 6px 6px rgb(216, 199, 199);
+}
+#mainSubtitle{
+  font-family: Georgia;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  bottom:300px;
+}
+div.mainInfo{
+  position: relative;
+  bottom: 700px;
+}
+h4{
+  font-size: 50px;
+  font-family: Georgia;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 0;
+}
+p{
+  font-size: 20px;
+  position: relative;
+  bottom: 50px;
+}
+h5{
+  font-size: 30px;
+  font-family: Georgia;
+  font-weight:bold;
+  color: darkgreen;
+  padding: 0;
+}
+div.beginPic{
+  display: flex;
+  position: relative;
+  bottom: 40px;
+}
+.frontPara{
+  position: relative;
+  top: 500px;
+  right: 300px;
+  text-align: center;
+  list-style-type: circle;
+}
+.front{
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: black
+}
+#voteForm{
+  background-color: lightgoldenrodyellow;
+  font-size: 40px;
+  font-weight: bold;
+}
